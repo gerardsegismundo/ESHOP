@@ -1,0 +1,150 @@
+/* bootstrap bootswatch*/
+@import './bootstrap.morph.css';
+@import './bootstrap.modification.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+  object-position: 0 30%;
+}
+
+/* ----------- spinner ------------- */
+.spinner {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ----------- Products ------------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  justify-content: center;
+  margin: 20px 0;
+}
+.products .card {
+  margin: 10px auto;
+}
+.products .card-img-top {
+  height: 250px;
+  width: 100%;
+}
+.products .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.products .card-text {
+  height: 70px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* --------- Detail Product ----------- */
+.detail_page .img-thumbnail.active {
+  border-color: orangered;
+  padding: 2px;
+}
+
+/* ----------- Profile ------------- */
+.profile_page .avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile_page .avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profile_page .avatar span {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff8;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 140, 45);
+  transition: 0.3 ease-in-out;
+}
+
+.profile_page .avatar:hover span {
+  bottom: -15%;
+}
+
+.profile_page #file_up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+/* ----------- Products Manager ------------- */
+.img-up .file_img {
+  position: relative;
+  width: 25%;
+  height: 100px;
+  cursor: pointer;
+}
+.img-up .file_img:nth-of-type(1) {
+  width: 100%;
+  height: 400px;
+}
+.img-up .file_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.img-up .file_img span {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 4;
+  background: white;
+  color: crimson;
+  padding: 3px 7px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bolder;
+  border: 1px solid crimson;
+}
